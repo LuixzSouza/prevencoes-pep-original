@@ -56,14 +56,14 @@ const PostAssessmentScreen: React.FC<Props> = ({ navigation }) => {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <Text style={styles.title}>Avaliação Pós-CPRE / Intraoperatória</Text>
-          <Text style={styles.subtitle}>
+          <Text style={styles.title}>Avaliação Intraoperatória</Text>
+          {/* <Text style={styles.subtitle}>
             Identifique os fatores de risco que ocorreram durante o procedimento
-          </Text>
+          </Text> */}
         </View>
 
         {/* Card de Aviso Melhorado */}
-        <View style={styles.infoCard}>
+        {/* <View style={styles.infoCard}>
           <View style={styles.infoHeader}>
             <Info color={colors.primary} size={18} />
             <Text style={styles.infoTitle}>Importante</Text>
@@ -72,7 +72,7 @@ const PostAssessmentScreen: React.FC<Props> = ({ navigation }) => {
             Esta avaliação deve ser realizada durante ou imediatamente após
             o procedimento de CPRE, baseada nos eventos intraoperatórios observados.
           </Text>
-        </View>
+        </View> */}
 
         <View style={styles.questionsContainer}>
           {postAssessmentQuestions.map((question) => (
@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: spacing.sm,
     lineHeight: typography.fontSize['2xl'] * typography.lineHeight.tight,
+    marginTop: spacing['5xl'], // Espaçamento maior no topo para destacar o conteúdo
   },
   subtitle: {
     fontSize: typography.fontSize.base,

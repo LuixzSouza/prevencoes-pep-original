@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: spacing.sm,
     lineHeight: typography.fontSize['2xl'] * typography.lineHeight.tight,
+    marginTop: spacing['5xl'], // Espaçamento maior no topo para destacar o conteúdo
   },
   subtitle: {
     fontSize: typography.fontSize.base,

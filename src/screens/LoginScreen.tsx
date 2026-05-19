@@ -101,15 +101,12 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
 
         <View style={styles.header}>
           <Text style={styles.title}>Entrar</Text>
-          <Text style={styles.subtitle}>
-            Faça login com suas credenciais profissionais
-          </Text>
         </View>
 
         <View style={styles.form}>
           <Field
             label="CRC"
-            placeholder="Digite seu CRC (ex: 12345)"
+            placeholder="Digite seu CRC"
             placeholderTextColor="#9E9E9E"
             value={formData.crc}
             onChangeText={(text) => setFormData(prev => ({ ...prev, crc: text }))}
@@ -138,40 +135,41 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
             style={{ backgroundColor: '#ECF1FF' }}
           />
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.forgotPassword}
             onPress={handleForgotPassword}
             accessibilityRole="button"
             accessibilityLabel="Esqueci minha senha"
-          >
+          > 
             <Text style={styles.forgotPasswordText}>Esqueci minha senha</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
-        <View style={styles.testInfo}>
+        <View style={styles.footer}>
+          <PrimaryButton
+            title="Entrar"
+            onPress={handleLogin}
+            loading={loading}
+            disabled={loading}
+            // style={styles.loginButton}
+          />
+
+          <Text
+            style={styles.skipText}
+            onPress={() => navigation.navigate('PreAssessment')}
+            accessibilityRole="button"
+            accessibilityLabel="Pular login"
+          >
+            Pular login
+          </Text>
+        </View>
+
+        {/* <View style={styles.testInfo}>
           <Text style={styles.testTitle}>Informações para teste:</Text>
           <Text style={styles.testText}>• CRC: Qualquer número de 4-6 dígitos</Text>
           <Text style={styles.testText}>• Senha: 1234</Text>
-        </View>
+        </View> */}
       </ScrollView>
-
-      <View style={styles.footer}>
-        <PrimaryButton
-          title="Entrar"
-          onPress={handleLogin}
-          loading={loading}
-          disabled={loading}
-        />
-
-        <Text
-          style={styles.skipText}
-          onPress={() => navigation.navigate('PreAssessment')}
-          accessibilityRole="button"
-          accessibilityLabel="Pular login"
-        >
-          Pular login
-        </Text>
-      </View>
     </View>
   );
 };
@@ -182,17 +180,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface, // Fundo principal Branco
   },
   scrollView: {
-    flex: 1,
+    // Não força o ScrollView a ocupar toda a altura da tela
   },
   scrollContent: {
     paddingHorizontal: spacing.lg,
     paddingTop: spacing.xl,
+    paddingBottom: spacing.lg,
   },
   topBar: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: spacing['2xl'],
+    marginTop: spacing['2xl'],
   },
   backButton: {
     flexDirection: 'row',
@@ -211,8 +211,8 @@ const styles = StyleSheet.create({
     height: 40,
   },
   header: {
-    alignItems: 'flex-start', // Alinhado à esquerda para dar um visual mais moderno e limpo
-    marginBottom: spacing['2xl'],
+    alignItems: 'center', // Alinhado à esquerda para dar um visual mais moderno e limpo
+    marginBottom: spacing['3xl'],
   },
   title: {
     fontSize: typography.fontSize['3xl'],
@@ -229,6 +229,7 @@ const styles = StyleSheet.create({
     // Fundo branco sem sombras, totalmente integrado à tela
     backgroundColor: 'transparent', 
     marginBottom: spacing.lg,
+    
   },
   fieldSpacing: {
     height: spacing.lg,
@@ -261,9 +262,17 @@ const styles = StyleSheet.create({
     lineHeight: typography.fontSize.sm * typography.lineHeight.relaxed,
   },
   footer: {
-    padding: spacing.lg,
-    paddingBottom: spacing['2xl'],
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.lg,
+    paddingBottom: spacing.lg,
     gap: spacing.md,
+    alignItems: 'center',
+    marginBottom: 0,
+  },
+  loginButton: {
+    minHeight: 44,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing['2xl'],
   },
   skipText: {
     fontSize: typography.fontSize.base,
