@@ -35,10 +35,10 @@ export const assessPreCPRERisk = (answers: PreCPREAnswers): PreCPREResult => {
     return {
       riskLevel: 'high',
       treatment: [
-        'Diclofenaco 100 mg via retal 10 minutos antes da CPRE',
-        'Ringer Lactato 3 mL/kg durante a CPRE',
-        'Ringer Lactato 20 mL/kg até 1 hora após a CPRE',
-        'Ringer Lactato 3 mL/kg/h pelas próximas 8 horas após a CPRE'
+        'Iniciar Diclofenaco 100 mg via retal 10 minutos antes da CPRE +',
+        'Associar Ringer com Lactato 3ml/kg durante a CPRE',
+        '20 ml/kg até 1 hora após a CPRE e',
+        '3ml/kg/h durante as próximas 8 horas após a CPRE'
       ],
       shouldProceedToPost: false, // Alto risco pré vai direto para resultado final
     };

@@ -41,7 +41,7 @@ export const Field: React.FC<FieldProps> = ({
         ]}
       >
         {label}
-        {required && <Text style={styles.required}> *</Text>}
+        
       </Text>
 
       <TextInput

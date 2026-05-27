@@ -42,71 +42,15 @@ const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
         {/* Seção de Ação */}
         <View style={styles.actionSection}>
           <Text style={styles.instructionText}>
-            Para acessar, informe seu CRC e senha.
+            Este sistema avalia o risco cirúrgico para CPRE.
+            Para acessar informe seu CRC e senha
           </Text>
 
           <PrimaryButton
             title="Entrar"
             onPress={() => navigation.navigate('Login')}
-          />
-
-          {/* Botão de Toggle Melhorado com Ícone */}
-          <TouchableOpacity 
-            style={styles.toggleButton} 
-            onPress={toggleInfo}
-            activeOpacity={0.7}
-            accessibilityRole="button"
-          >
-            <Text style={styles.toggleText}>
-              {showInfo ? 'Ocultar informações' : 'Saiba mais sobre a ferramenta'}
-            </Text>
-            {showInfo ? (
-              <ChevronUp color={colors.primary} size={16} />
-            ) : (
-              <ChevronDown color={colors.primary} size={16} />
-            )}
-          </TouchableOpacity>
-        </View>
-
-        {/* Seção de Informações (Oculta por padrão) */}
-        {showInfo && (
-          <View style={styles.infoSection}>
-            <View style={styles.card}>
-              <Text style={styles.cardTitle}>Sobre esta ferramenta</Text>
-              <Text style={styles.description}>
-                Este aplicativo auxilia na estratificação de risco para prevenção de pancreatite pós-CPRE (PEP)
-                através de avaliações baseadas em evidências científicas.
-              </Text>
-
-              {/* Lista com Ícones Customizados */}
-              <View style={styles.featureList}>
-                {[
-                  'Avaliação pré-procedimento',
-                  'Avaliação intraoperatória',
-                  'Protocolos de tratamento personalizados',
-                  'Interface intuitiva e acessível'
-                ].map((feature, index) => (
-                  <View key={index} style={styles.featureItem}>
-                    <CheckCircle2 size={16} color={colors.primary} />
-                    <Text style={styles.featureText}>{feature}</Text>
-                  </View>
-                ))}
-              </View>
-            </View>
-
-            {/* Disclaimer Estilo "Aviso Médico" */}
-            <View style={styles.disclaimer}>
-              <View style={styles.disclaimerHeader}>
-                <ShieldAlert size={18} color={colors.primary} />
-                <Text style={styles.disclaimerBold}>Importante</Text>
-              </View>
-              <Text style={styles.disclaimerText}>
-                Esta ferramenta é destinada a profissionais de saúde qualificados. 
-                As recomendações devem ser sempre consideradas no contexto clínico individual do paciente.
-              </Text>
-            </View>
-          </View>
-        )}
+          /> 
+        </View>   
       </ScrollView>
     </View>
   );
