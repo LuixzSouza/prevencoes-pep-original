@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     color: colors.primary, // Texto em Azul
     lineHeight: typography.fontSize.base * typography.lineHeight.normal,
     marginBottom: spacing.md,
+    textAlign: 'center',
   },
   footnoteRef: {
     color: colors.primary,
@@ -128,7 +129,8 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
   buttonWrapper: {
-    flex: 1
+     minWidth: 90,
+  alignItems: 'center',
   },
   button: {
     width: '100%',

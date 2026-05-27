@@ -85,7 +85,7 @@ export const preAssessmentQuestions: Question[] = [
   {
     id: 'isYoung',
     text: 'Paciente jovem?',
-    footnoteRef: '¹',
+    footnoteRef: '1',
   },
   {
     id: 'hasPEPHistory',
@@ -98,12 +98,12 @@ export const preAssessmentQuestions: Question[] = [
   {
     id: 'hasNonDilatedDucts',
     text: 'Ductos não dilatados?',
-    footnoteRef: '²',
+    footnoteRef: '2',
   },
   {
     id: 'hasNormalBilirubin',
     text: 'Nível de bilirrubina normal?',
-    footnoteRef: '³',
+    footnoteRef: '3',
   },
 ];
 
@@ -131,9 +131,9 @@ export const postAssessmentQuestions: Question[] = [
 // ============= NOTAS DE RODAPÉ =============
 
 export const footnotes = {
-  '¹': 'Paciente com idade menor ou igual a 30 anos.',
-  '²': 'Ducto hepato-colédoco tendo diâmetro menor ou igual a 5 para sexo feminino e menor ou igual a 7 para sexo masculino.',
-  '³': 'Bilirrubina total menor ou igual a 1,2.',
+  '1': 'Paciente com idade menor ou igual a 30 anos.',
+  '2': 'Ducto hepato-colédoco tendo diâmetro menor ou igual a 5 para sexo feminino e menor ou igual a 7 para sexo masculino.',
+  '3': 'Bilirrubina total menor ou igual a 1,2.',
   '*': 'Canulação difícil: ≥ 5 min para canulação ou > 5 tentativas',
   '**': 'Papilite ou fibrose de papila vistos em colangiorressonância prévia',
 };
