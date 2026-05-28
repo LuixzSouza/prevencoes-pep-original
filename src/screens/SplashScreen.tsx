@@ -114,11 +114,6 @@ const SplashScreen: React.FC<Props> = ({ navigation }) => {
           Prevenção de Pancreatite{'\n'}Pós-CPRE
         </Text>
 
-        <Text style={styles.subtitle}>
-          Ferramenta de estratificação de risco{'\n'}
-          para prevenção de PEP
-        </Text>
-
         <PulseLoader />
       </Animated.View>
 

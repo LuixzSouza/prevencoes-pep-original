@@ -47,13 +47,13 @@ const PostResultScreen: React.FC<Props> = ({ navigation, route }) => {
           <ResultCard
             riskLevel={result.riskLevel}
             treatment={result.treatment}
-            title="Protocolo Final de Tratamento"
+            title="Indicação"
           />
 
 
           <View style={styles.actions}>
             <PrimaryButton
-              title="Finalizar e Nova Avaliação"
+              title="Finalizar"
               onPress={handleNewAssessment}
               variant="primary"
             />
