@@ -35,7 +35,7 @@ export const assessPreCPRERisk = (answers: PreCPREAnswers): PreCPREResult => {
     return {
       riskLevel: 'high',
       treatment: [
-        'Diclofenaco 100 mg via retal 10 minutos antes da CPRE',
+        'Manter somente Diclofenaco 100 mg via retal',
         'Ringer Lactato 3 mL/kg durante a CPRE',
         'Ringer Lactato 20 mL/kg até 1 hora após a CPRE',
         'Ringer Lactato 3 mL/kg/h pelas próximas 8 horas após a CPRE'
@@ -134,8 +134,8 @@ export const footnotes = {
   '1': 'Paciente com idade menor ou igual a 30 anos.',
   '2': 'Ducto hepato-colédoco tendo diâmetro menor ou igual a 5 para sexo feminino e menor ou igual a 7 para sexo masculino.',
   '3': 'Bilirrubina total menor ou igual a 1,2.',
-  '*': 'Canulação difícil: ≥ 5 min para canulação ou > 5 tentativas',
-  '**': 'Papilite ou fibrose de papila vistos em colangiorressonância prévia',
+  '*': 'Canulação difícil: >= a 5 minutos para canulação ou mais de 5 tentativas de canulação. ',
+  '**': 'Papilite ou fibrose de papila vistos durante o',
 };
 
 // ============= HELPERS =============

@@ -27,7 +27,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
       </View>
 
       {/* Caixa de Conduta (Estilo Prescrição) */}
-      <View style={styles.treatmentBox}>
+      <View style={[styles.treatmentBox, { backgroundColor: riskColor }]}>
 
         <View style={styles.treatmentList}>
           {treatment.map((item, index) => (
@@ -83,8 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.line,
     marginBottom: spacing.lg,
   },
-  treatmentBox: {
-    backgroundColor: colors.alert, 
+  treatmentBox: { 
     padding: spacing.base,
     borderWidth: 1,
     borderColor: colors.line,
