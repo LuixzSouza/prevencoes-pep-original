@@ -50,15 +50,6 @@ const PostResultScreen: React.FC<Props> = ({ navigation, route }) => {
             title="Protocolo Final de Tratamento"
           />
 
-          <View style={[styles.summaryCard, { borderLeftColor: riskInfo.color }]}>
-            <View style={styles.cardHeader}>
-              <RiskIcon color={riskInfo.color} size={20} />
-              <Text style={[styles.summaryTitle, { color: riskInfo.color }]}>
-                {riskInfo.title}
-              </Text>
-            </View>
-            <Text style={styles.summaryText}>{riskInfo.message}</Text>
-          </View>
 
           <View style={styles.actions}>
             <PrimaryButton
