@@ -93,3 +93,11 @@ npm run test:watch
 - Sem backend real - apenas AsyncStorage local
 - Lógica clínica baseada no fluxograma PDF oficial
 - Testes unitários cobrem todos os cenários do fluxograma
+
+![Imagem1](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img1.jpg)
+![Imagem2](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img2.jpg)
+![Imagem3](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img3.jpg)
+![Imagem4](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img4.jpg)
+![Imagem5](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img5.jpg)
+![Imagem6](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img6.jpg)
+![Imagem7](https://raw.githubusercontent.com/LuixzSouza/prevencoes-pep-original/refs/heads/main/Pictures/img7.jpg)
