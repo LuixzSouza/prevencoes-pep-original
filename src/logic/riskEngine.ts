@@ -46,7 +46,7 @@ export const assessPreCPRERisk = (answers: PreCPREAnswers): PreCPREResult => {
     return {
       riskLevel: 'low',
       treatment: [
-        'Diclofenaco 100 mg via retal 10 minutos antes da CPRE'
+        'Iniciar Diclofenaco 100 mg via retal 10 minutos antes da CPRE '
       ],
       shouldProceedToPost: true, // Baixo risco pré avalia fatores pós
     };
@@ -60,9 +60,9 @@ export const assessPostCPRERisk = (answers: PostCPREAnswers): PostCPREResult => 
     return {
       riskLevel: 'high',
       treatment: [
-        'Manter Diclofenaco 100 mg via retal',
-        'Associar Ringer Lactato 20 mL/kg até 1 hora após a CPRE',
-        'Ringer Lactato 3 mL/kg/h durante as próximas 8 horas após a CPRE'
+        'Associar Ringer com Lactato na identificação do fator de alto risco:',
+        '20ml/kg até 1 hora após a CPRE e',
+        '3ml/kg/h durante as próximas 8 horas após a CPRE.'
       ],
     };
   } else {
@@ -143,10 +143,13 @@ export const footnotes = {
 export const getRiskLevelColor = (level: PreRiskLevel | PostRiskLevel): string => {
   switch (level) {
     case 'high':
-      return colors.alert; 
+      return colors.alert; // Alto risco -> vermelho
     case 'low':
+      return colors.safe;  // Baixo risco -> cor segura (verde)
     case 'none':
-      return colors.safe; 
+      return colors.safe;  // Sem risco adicional -> verde
+    default:
+      return colors.safe;
   }
 };
 
